@@ -35,3 +35,7 @@ B
 {{ site.data.font-awesome.icons[0]['accusoft'].svg['brands'].width }}
 C
 {{ site.data.font-awesome.icons[0]["accusoft"].svg["brands"].width }}
+X
+{% for d in site.data %}
+data - {{ d }}
+{% endfor %}
