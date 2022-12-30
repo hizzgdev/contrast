@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 <head>
-<title>{{ page.name | remove_first: ".md" }} | {{ page.categories | join: " | " }} | {{ site.title | escape }} {{ page.path }}</title>
+<title>{{ page.path | remove_first: ".md" | split: "/" | reverse | join: " | " }} | {{ site.title | escape }}</title>
 <meta charset="{{ site.encoding }}">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="{{ page.author | default: site.author | escape }}">
