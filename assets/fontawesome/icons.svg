@@ -13,11 +13,11 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 {% for key in keys %}
 {% for link in site[key] %}
   {% assign icon = link.icon %}
-  {% assign icon_obj = site.data.font-awesome.icons[icon] %}
+  {% assign icon_obj = site.data.font-awesome.icons[0][icon] %}
   {% assign icon_id = icon_obj.free | first %}
   {% assign svg = icon_obj.svg[icon_id] %}
   <symbol id="{{ icon }}" viewBox="0 0 {{ svg.width }} {{ svg.height }}" icon-id="{{ icon_id }}"><path d="{{ svg.path }}" /></symbol>
-  {{ svg }}
+  {{ icon_obj }}
 {% endfor %}
 {% endfor %}
 </svg>
