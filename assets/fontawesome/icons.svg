@@ -16,7 +16,8 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
   {% assign icon_obj = site.data.font-awesome.icons[icon] %}
   {% assign icon_id = icon_obj.free | first %}
   {% assign svg = icon_obj.svg[icon_id] %}
-  <symbol id="{{ icon }}" viewBox="0 0 {{ svg.width }} {{ svg.height }}"><path d="{{ svg.path }}" /></symbol>
+  <symbol id="{{ icon }}" viewBox="0 0 {{ svg.width }} {{ svg.height }}" icon-id="{{ icon_id }}"><path d="{{ svg.path }}" /></symbol>
+  {{ svg }}
 {% endfor %}
 {% endfor %}
 </svg>
