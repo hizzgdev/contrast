@@ -18,3 +18,5 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 {% endfor %}
 {% endfor %}
 </svg>
+
+{{ site.data.font-awesome.font-icons | inspect }}
