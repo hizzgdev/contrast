@@ -13,7 +13,9 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 {% for key in keys %}
 {% for link in site[key] %}
   {% assign icon = link.icon %}
-  {% assign svg = site.data.font-awesome.icons[icon].svg | first %}
+  {% assign icon_obj = site.data.font-awesome.icons[icon] %}
+  {% assign icon_id = icon_obj.free | first %}
+  {% assign svg = icon_obj[icon_id] %}
   <symbol id="{{ icon }}" viewBox="0 0 {{ svg[1].width }} {{ svg[1].height }}"><path d="{{ svg[1].path }}" /></symbol>
 {% endfor %}
 {% endfor %}
