@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 <head>
-<title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
+{% assign page_title = page.name | slice: 0, -3 %}
+{% assign page_path = page.categories | reverse | join: " | " %}
+<title>{% if page_title %}{{ page_title }} | {% endif %}{% if page_path %}{{ page_path }} | {% endif %}{{ site.title | escape }}</title>
 <meta charset="{{ site.encoding }}">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="{{ page.author | default: site.author | escape }}">
