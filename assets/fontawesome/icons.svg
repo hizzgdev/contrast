@@ -21,21 +21,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 {% endfor %}
 {% endfor %}
 </svg>
-A
 {{ site.data.font-awesome.icons.accusoft.svg.brands.width }}
-B
-{{ site.data.font-awesome.icons['accusoft'].svg['brands'].width }}
-C
-{{ site.data.font-awesome.icons["accusoft"].svg["brands"].width }}
-D
-{{ site.data.font-awesome.icons | size }}
-A
-{{ site.data.font-awesome.icons[0].accusoft.svg.brands.width }}
-B
-{{ site.data.font-awesome.icons[0]['accusoft'].svg['brands'].width }}
-C
-{{ site.data.font-awesome.icons[0]["accusoft"].svg["brands"].width }}
-X
-{% for d in site.data %}
-data - {{ d }}
-{% endfor %}
+
+x
+{{ site.data.font-awesome | inspect }}
