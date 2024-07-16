@@ -7,13 +7,13 @@
     {%- assign title = item.title | default: node.title -%}
     {%- assign icon = item.icon | default: item.sidebaricon -%}
     {%- assign level = item.level | default: 1 -%}
-    {%- if level = 1 -%}
+    {%- if level == 1 -%}
     <a aria-label="{{ title }}" href="{{ url | relative_url }}" {% if url == page.url %}class="selected"{% endif %}>
       <svg aria-hidden="true" class="icon"><use xlink:href="{{ "/assets/fontawesome/icons.svg" | relative_url }}#{{ icon }}"></use></svg>
       <span aria-hidden="true">{{ title }}</span>
     </a>
     {%- else -%}
-    <a aria-label="{{ title }}" href="{{ url | relative_url }}" {% if url == page.url %}class="sub-title selected"{% else %}class="sub-title"{% endif %}>
+    <a aria-label="{{ title }}" href="{{ url | relative_url }}" {% if url == page.url %}class="level-{{level}} selected"{% else %}class="level-{{level}}"{% endif %}>
       <svg aria-hidden="true" class="icon"><use xlink:href="{{ "/assets/fontawesome/icons.svg" | relative_url }}#{{ icon }}"></use></svg>
       <span aria-hidden="true">{{ title }}</span>
     </a>
